@@ -2,13 +2,13 @@
 <html>
 <head>
     <style>
-    
         body {
             margin: 0;
             padding: 0;
             background-color: rgb(244, 244, 244);
+            overflow-x: hidden;
         }
-        
+
         .container {
             width: 100%;
             height: 130px;
@@ -18,39 +18,41 @@
             justify-content: space-between;
             padding: 20px;
         }
-        
+
         .logo {
             width: 270px;
             height: 56px;
             margin-right: 20px;
         }
-        
+
         .blue-text {
             color: blue;
             margin: 0;
             font-size: 18px;
             text-align: left;
         }
-        
+
         .search-container {
+            max-width: 130px;
+            background-color: #f2f2f2;
             display: flex;
             align-items: center;
-            background-color: #f2f2f2;
             padding: 8px;
             border-radius: 20px;
         }
-        
+
         .search-container input[type=text] {
-            border: none;
             background-color: #f2f2f2;
+            color: #333;
             font-size: 16px;
             width: 300px;
             margin-right: 10px;
+            border: none;
         }
-        
+
         .search-container button {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #ddd;
+            color: #333;
             border: none;
             border-radius: 50%;
             cursor: pointer;
@@ -58,7 +60,7 @@
             height: 40px;
             font-size: 16px;
         }
-        
+
         .nav-container {
             width: 100%;
             height: 50px;
@@ -68,78 +70,134 @@
             justify-content: space-between;
             padding: 0 20px;
         }
-        
+
         .nav-container a {
             color: black;
             text-decoration: none;
             margin-left: 20px;
             font-weight: bold;
         }
-        
+
         .nav-container a:hover {
             text-decoration: underline;
         }
-        
+
         .nav-container .secciones {
             display: flex;
             align-items: center;
         }
-        
+
         .nav-container .secciones-text {
             margin-right: 20px;
             font-weight: bold;
         }
+
         .container2 {
-          background-color: rgb(50, 50, 50);
-          padding: 20px;
-          border-radius: 10px;
-          width: fit-content;
+            background-color: rgb(50, 50, 50);
+            padding: 20px;
+            border-radius: 10px;
+            width: fit-content;
         }
 
         .container2 p {
-          margin: 0;
+            margin: 0;
         }
 
         .container2 button {
-          margin-top: 20px;
-          border: none;
-          padding: 10px 20px;
-          border-radius: 5px;
-          cursor: pointer;
+            margin-top: 20px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        a::after {
-        content: " | ";
-      }
 
-      a:last-child::after {
-        content: "";
-      }
+        a::after {
+            content: " | ";
+        }
+
+        a:last-child::after {
+            content: "";
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .centered-container {
+            margin: auto;
+        }
+
+        .footer {
+            background-color: #000;
+            width: 100%;
+            max-width: initial;
+            margin-left: 0;
+            margin-right: 0;
+            font-family: "Archivo Narrow",sans-serif;
+            border-top: 12px solid #dd0209;
+            clear: both;
+            overflow: hidden;
+            color: #cacaca;
+            margin-top: 24px;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+        .search-container {
+          max-width: 130px;
+          background-color: #f2f2f2;
+        }
+
+        .search-container input[type="text"] {
+          background-color: #f2f2f2;
+          color: #333;
+          width: 100%;
+          padding: 6px;
+          border: none;
+          border-radius: 2px;
+        }
+
+        .search-container button {
+          background-color: #ddd;
+          color: #333;
+        }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <img class="logo" src="https://www.pagina12.com.ar/assets/media/logos/amp/logo_pagina_12_n.svg?v=2.0.126" alt="Logo Página 12">
-        <div class="search-container" style="margin-right: 30px" >
-            <input type="text" placeholder="Buscar...">
-            <button><i class="fa fa-search"></i></button>
-        </div>
+  <div class="container" style="width: 1800px; margin: 0 auto;">
+    <div style="display: flex; align-items: center;">
+      <img class="logo" src="https://www.pagina12.com.ar/assets/media/logos/amp/logo_pagina_12_n.svg?v=2.0.126" alt="Logo Página 12">
+      <div style="color: #0089c1; font-size: 24px; margin-left: 20px;">11 de mayo de 2023 | Edición Impresa | PDF</div>
     </div>
-    <br>
-  <div class="nav-container">
-      <div class="secciones">
-          <p class="secciones-text" style="color: #0089c1;">SECCIONES Y SUPLEMENTOS</p>
-          <a href="#" style="color:#0089c1;">El Pais</a>
-          <a href="#" style="color: #0089c1;">Economia</a>
-          <a href="#" style="color: #0089c1;">Sociedad</a>
-          <a href="#" style="color: #0089c1;">Espectaculos</a>
-          <a href="#" style="color: #0089c1;">Deportes</a>
-          <a href="#" style="color: #0089c1;">El Mundo</a>
-          <a href="#" style="color: #0089c1;">Ciencia</a>
-      </div>
+    <div class="search-container" style="margin-right: 30px">
+      <input type="text" placeholder="Buscar...">
+      <button><i class="fa fa-search"></i></button>
+    </div>
   </div>
   <br>
-  <br>
-  <hr>
+<div class="nav-container" style="width: 1800px; margin: 0 auto;">
+    <div class="secciones">
+        <p class="secciones-text" style="color: #0089c1;">SECCIONES Y SUPLEMENTOS</p>
+        <a href="#" style="color:#0089c1;">El Pais</a>
+        <a href="#" style="color: #0089c1;">Economia</a>
+        <a href="#" style="color: #0089c1;">Sociedad</a>
+        <a href="#" style="color: #0089c1;">Espectaculos</a>
+        <a href="#" style="color: #0089c1;">Deportes</a>
+        <a href="#" style="color: #0089c1;">El Mundo</a>
+        <a href="#" style="color: #0089c1;">Ciencia</a>
+    </div>
+   <p class="secciones-text" style="color: #0089c1; text-align: right; font-weight: bold;">Hoy: Buenos Aires12</p>
+</div>
+<br>
+<br>
+<hr>
+</div>
+<div class="ENTERO" style="width: 1500px; margin: 0 auto;">
+<div style="display: flex; justify-content: center;">
   <div style="display: flex; align-items: flex-start; justify-content: flex-start;">
     <div style="display: flex; flex-direction: column; align-items: center; margin-right: 20px; margin-left: 10px">
       <p style="font-size: 18px; font-weight: bold; margin-right: 10px; color: #0089c1;">ROSARIO12</p>
@@ -149,44 +207,67 @@
       <hr>
       <p style="font-size: 14px; margin-top: 10px; font-style: italic;">30 de noviembre de 2021 - 10:43</p>
     </div>
-    <div style="text-align:center;">
-    <div style="text-align:left;">
-    <h2>A los tres homicidios se sumaron dos víctimas baleadas días atrás</h1>
-	<h1 style="color:#0089c1;">El lunes cerró con cinco muertes violentas</h2>
-    </div>
-      <img src="https://images.pagina12.com.ar/styles/focal_3_2_960x640/public/2021-11/293581-evaperon_0.jpg?itok=MEIKnlpS" alt="Imagen de la noticia" style="max-width: 100%; max-height: 100%;">
-        <p>En solo 24 horas, fueron cinco las víctimas de ataques a tiros en la región. Al doble crimen de Gandhi y Teniente Agneta, el lunes por la noche se sumó el caso de un hombre de 50 años, en Colombres al 1300 bis del barrio 7 de Septiembre. Además, dos jóvenes que habían sido heridos de bala la semana pasada, también murieron ayer.</p>
-	<p>Personas no identificadas pasaron en auto y dispararon alrededor de ocho veces con un arma 9 mm contra el cuerpo del hombre de 50 años, que recibió las balas en el abdomen y las piernas, por lo que fue trasladado al hospital Eva Perón, de Granadero Baigorria, donde falleció al poco tiempo de ingresar.</p>
-	<p>En tanto, un joven de 22 años falleció ayer en el hospital Roque Sáenz Peña, donde se encontraba tras haber sido baleado el domingo, en barrio Las Flores.</p>
-	<p>Y desde el Hospital de Emergencias Clemente Álvarez (Heca) informaron que este lunes también murió otro joven de 25 años que había sido baleado desde una moto el 23 de noviembre, en Villa Gobernador Gálvez.</p>
-        </p><div class="container2">
-</style>
-  <p style="font-weight: bold;  text-align:left; color: white;">Si llegaste hasta acá...</p>
-  <br>
-  <p style="color: white; text-align:left">Es porque te interesa la información rigurosa, porque valorás tener otra mirada más allá del bombardeo cotidiano de la gran mayoría de los medios. Página/12 tiene un compromiso de más de 30 años con ella y cuenta con vos para renovarlo cada día. Defendé la otra mirada.</p>
-  <p style="color: white; text-align:left"><strong>Defendé tu voz.</strong></p>
-  <button style="background-color: red; color: white;">Unite a Página/12</button>
+    <div style="text-align:center;"></div>
+  </div>
+  <div class="centered-container" style="max-width: 1000px; align-self: center;">
+    <h2>A los tres homicidios se sumaron dos víctimas baleadas días atrás</h2>
+    <h1 style="color:#0089c1;">El lunes cerró con cinco muertes violentas</h1>
+    <img src="https://images.pagina12.com.ar/styles/focal_3_2_960x640/public/2021-11/293581-evaperon_0.jpg?itok=MEIKnlpS" alt="Imagen de la noticia" style="max-width: 100%; height: auto;">
+    <p>En solo 24 horas, fueron cinco las víctimas de ataques a tiros en la región. Al doble crimen de Gandhi y Teniente Agneta, el lunes por la noche se sumó el caso de un hombre de 50 años, en Colombres al 1300 bis del barrio 7 de Septiembre. Además, dos jóvenes que habían sido heridos de bala la semana pasada, también murieron ayer.</p>
+    <p>Personas no identificadas pasaron en auto y dispararon alrededor de ocho veces con un arma 9 mm contra el cuerpo del hombre de 50 años, que recibió las balas en el abdomen y las piernas, por lo que fue trasladado al hospital Eva Perón, de Granadero Baigorria, donde falleció al poco tiempo de ingresar.</p>
+    <p>En tanto, un joven de 22 años falleció ayer en el hospital Roque Sáenz Peña, donde se encontraba tras haber sido baleado el domingo, en barrio Las Flores.</p>
+    <p>Y desde el Hospital de Emergencias Clemente Álvarez (Heca) informaron que este lunes también murió otro joven de 25 años que había sido baleado desde una moto el 23 de noviembre, en Villa Gobernador Gálvez.</p>
     <div class="container2">
+		<p style="font-weight: bold; text-align:left; color: white;">Si llegaste hasta acá...</p>
+		<br>
+		<p style="color: white; text-align:left">Es porque te interesa la información rigurosa, porque valorás tener otra mirada más allá del bombardeo cotidiano de la gran mayoría de los medios. Página/12 tiene un compromiso de más de 30 años con ella y cuenta con vos para renovarlo cada día. Defendé la otra mirada.</p>
+		<p style="color: white; text-align:left"><strong>Defendé tu voz.</strong></p>
+		<button style="background-color: red; color: white;">Unite a Página/12</button>
+	</div>
 </div>
-</div>
+<div style="width: 300px;">
+  <div style="display: flex; flex-wrap: wrap; align-items: center; background-color: white;">
+    <div style="flex: 1;">
+      <p style="font-weight: bold; color: white; background-color: red; width: 100%; padding: 10px 0;">Últimas Noticias</p>
+      <img src="https://images.pagina12.com.ar/styles/focal_3_2_300x200/public/2023-05/724723-whatsapp-20image-202023-05-10-20at-205-59-38-20pm.jpeg?h=ada05aa9&amp;itok=Mey3FwUk" alt="Imagen de la noticia2" style="max-width: 100%; max-height: 100%;">
+      <p><span style="font-weight: bold; color:#5db4de">Estados Unidos promulga una nueva norma migratoria a horas de que expire el Título 42.</span> La medida limitará el acceso al asilo en la frontera entre EE.UU. y México</p>
+      <hr>
+      <p><span style="font-weight: bold; color:#5db4de">Estela Díaz y Julio Alak pidieron por la reelección de Kicillof.</span> Acto en La Plata</p>
+      <hr>
+      <p><span style="font-weight: bold; color:#5db4de">Un congresista norteamericano fue detenido por falsear hasta su currículum.</span> La última mentira de George Santos: declararse no culpable</p>
+      <hr>
+      <p><span style="font-weight: bold; color:#5db4de">CABA: vecinos de Chacarita denuncian el aumento de negocios inmobiliarios en el barrio.</span> Exigen al GCBA que limite las construcciones</p>
+      <hr>
+      <p><span style="font-weight: bold; color:#5db4de">La UTEP y Unidad Piquetera arman un frente común para una protesta.</span> Primera confluencia en cuatro años</p>
+    </div>
   </div>
-</body>
-<div style="display: flex; flex-wrap: wrap; align-items: center; padding: 20px;">
-<div style="display: flex; flex-wrap: wrap; align-items: center; background-color: white;">
-  <div style="flex: 1;">
-    <p style="font-weight: bold; text-align: left; color: white; background-color: red; width: 100%; padding: 10px 0;">Últimas Noticias</p>
-    <img src="https://images.pagina12.com.ar/styles/focal_3_2_300x200/public/2023-05/724723-whatsapp-20image-202023-05-10-20at-205-59-38-20pm.jpeg?h=ada05aa9&amp;itok=Mey3FwUk" alt="Imagen de la noticia2" style="max-width: 100%; max-height: 100%;">
-    <p><span style="font-weight: bold; color:#5db4de">Estados Unidos promulga una nueva norma migratoria a horas de que expire el Título 42.</span> La medida limitará el acceso al asilo en la frontera entre EE.UU. y México</p>
-    <hr>
-    <p><span style="font-weight: bold; color:#5db4de">Estela Díaz y Julio Alak pidieron por la reelección de Kicillof.</span> Acto en La Plata</p>
-    <hr>
-    <p><span style="font-weight: bold; color:#5db4de">Un congresista norteamericano fue detenido por falsear hasta su currículum.</span> La última mentira de George Santos: declararse no culpable</p>
-    <hr>
-    <p><span style="font-weight: bold; color:#5db4de">CABA: vecinos de Chacarita denuncian el aumento de negocios inmobiliarios en el barrio.</span> Exigen al GCBA que limite las construcciones</p>
-    <hr>
-    <p><span style="font-weight: bold; color:#5db4de">La UTEP y Unidad Piquetera arman un frente común para una protesta.</span> Primera confluencia en cuatro años</p>
   </div>
 </div>
+</div>
+</div>
+<div class="footer" >
+  <div class="social-media">
+  </div>
+    <div class="wrapper" style="text-align: center;">
+      <div class="row">
+        <div class="logos">
+          <br>
+          <br>
+            <a href=""><img src="https://www.pagina12.com.ar/assets/media/assets/Pagina12-Logo-footer_blanco.svg?v=2.0.126" loading="lazy"></a>
+            <br>
+            <br>
+          </div>
+          <hr>
+          <br>
+          <div class="column large-12"><div class="disclaimer"><span>República Argentina</span><span> | </span><span>Todos los derechos reservados</span><span> | </span>Política de privacidad</a><span> | </span>Términos y Condiciones</a></div><div class="p12-copyright"><span>© 2000-2023 </span><span>www.pagina12.com.ar</span></div></div>
+          <br>
+          <br></div>
+      </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>  
 </body>
 </html>
 
